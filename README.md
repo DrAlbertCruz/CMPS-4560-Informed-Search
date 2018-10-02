@@ -83,6 +83,7 @@ Study this implementation of best first search. Note that the tree search hasn't
 
 1. What type of a search is this?
 1. Based on `append/3` is this breadth-first or depth-first?
+1. Would this still work if you changed the order within `append/3` to the other type of search?
 
 ## A*
 
