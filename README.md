@@ -51,4 +51,41 @@ This lab consists of two parts: (1) study a best-first search algorithm in Prolo
 
 ## Best-first search
 
-Luckily you do not have to do your work from scratch. `bestfirst.pl` contains an implementation of best-first search.
+Luckily you do not have to do your work from scratch. `bestfirst.pl` contains an implementation of best-first search. Bring up `swipl`:
+
+```shell
+$ swipl
+```
+
+Consult the given files:
+
+```prolog
+?- ['map.pl'].
+true.
+?- ['bestfirst.pl'].
+true.
+```
+
+Then carry out a search from arad to bucharest. *Do not forget that identifiers starting with a capital letter are actually variables, do not accidentally type Arad as opposed to arad.*
+
+```prolog
+?- best_first([[arad]],bucharest,N,P).
+3
+5
+5
+N = [bucharest, fagaras, sibiu, arad],
+P = 3 ;
+```
+
+This command should be similar to what we did with depth-first. On line 16, `wrq/1` outputs the length of the current queue to the CLI. It's definition is 67. This is why it outputs numbers before finally giving us the values of `N` and `P` that satisfy our sentence. Go ahead and hit continue (`;`) to see the rest of the possible solutions. You could insert some code to get the search to terminate on first goal, but it is not required.
+
+Study this implementation of best first search. Note that the tree search hasn't really changed. Except that before the recursive call to itself it sorts the queue. You have been provided with a `sort_queue1/2` predicate which is a recursive search. Consider the following questions before moving forward:
+
+1. What type of a search is this?
+1. Based on `append/3` is this breadth-first or depth-first?
+
+## A*
+
+Now implement A* search. Recall from the text/lecture that the cost function in A* (values which we sort a node by) is defined by:
+f = g + h
+where f is the total estimated cost. g is the cost so far to reach the goal. h is the estimated distance to the goal. 
