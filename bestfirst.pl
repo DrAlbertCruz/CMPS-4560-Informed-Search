@@ -48,18 +48,6 @@ hh(State, Value) :-
    write(h(State, Value)), nl,
    abort.
 
-f([X|T],F) :-                   % for A* search
-    reverse_path_cost([X|T],G), % calculate G
-    hh(X,H),                    % calculate H
-    F is G+H.                   % F = G + H
-
-reverse_path_cost([A,B],Cost) :-
-    arc(B,A,Cost).
-reverse_path_cost([A,B|T],Cost) :-
-    arc(B,A,Cost1),
-    reverse_path_cost([B|T],Cost2),
-    Cost is Cost1+Cost2.
-
 %--------------------------------------------------------------%
 
 wrq(Q) :- length(Q,N), writeln(N).
