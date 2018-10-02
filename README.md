@@ -44,3 +44,11 @@ Recall that tree search algorithms are essentially the same. They just vary base
 1. Some predicate to store the heuristic (this is done)
 1. An ability to sort the list of paths based on heuristic cost
 1. ... From above, we need to create a sorting algorithm in Prolog
+
+# Approach
+
+This lab consists of two parts: (1) study a best-first search algorithm in Prolog, and (2) ammend it to be an A* search.
+
+## Best-first search
+
+Luckily you do not have to do your work from scratch. `bestfirst.pl` contains an implementation of best-first search.
