@@ -81,7 +81,7 @@ This command should be similar to what we did with depth-first. On line 16, `wrq
 
 Study this implementation of best first search. Note that the tree search hasn't really changed. Except that before the recursive call to itself it sorts the queue. You have been provided with a `sort_queue1/2` predicate which is a recursive search. Consider the following questions before moving forward:
 
-1. What type of a search is this?
+1. What type of sort algorithm is `sort_queue1/2`?
 1. Based on `append/3` is this breadth-first or depth-first?
 1. Would this still work if you changed the order within `append/3` to the other type of search?
 
