@@ -48,8 +48,6 @@ hh(State, Value) :-
    write(h(State, Value)), nl,
    abort.
 
-h(_,1).  % default value (must be redefined for each problem)                        
-
 f([X|T],F) :-                   % for A* search
     reverse_path_cost([X|T],G), % calculate G
     hh(X,H),                    % calculate H

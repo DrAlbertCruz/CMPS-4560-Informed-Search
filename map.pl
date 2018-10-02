@@ -58,6 +58,7 @@ arc(zerind,oradea,71).
 
 h(Node, Value) :- 
     hdist(Node, Value).
+h(_,1). % A default value
 
 hdist(arad     ,366).
 hdist(bucharest,  0).
